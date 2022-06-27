@@ -258,7 +258,7 @@ function zone_update(num) {
         }
         zone_update(2);
     } else if (num == 2) {
-        if (player_dripscore >= 1) {
+        if (player_dripscore >= 150) {
             document.getElementsByClassName("shop_button")[0].disabled = false;
         } else {
             document.getElementsByClassName("shop_button")[0].disabled = true;
@@ -277,8 +277,8 @@ function shop_travel(num) {
         return;
     } else if (num == 0) {
         shop_current = num;
-        shop_items = [1, 4, 2, 8];
-        shop_prices = [1, 5, 10, 15];
+        shop_items = [2, 6, 8, 9];
+        shop_prices = [10, 15, 25, 50];
     }
     for (i = 1; i <= shop_items.length; i++) {
         document.getElementById("shop_" + i).style.display = "flex";
