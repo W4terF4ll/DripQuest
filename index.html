@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />e
+        <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="interface.css" />
+        <script src="main.js"></script>
         <meta name="description" content="Eternal Quest to Look the Best">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> DripQuest </title>
     </head>
     <body>
         <div class="fight">
-
+            <div class="player_class">
+                <div id="player_id">
+                    <p class="fight_player">\o/</p>
+                    <p id="player_id">HP: <span class="fight_player_health" style="color: lightgreen"></span></p>
+                    <p id="player_id">DMG: <span class="fight_player_damage" style="color: red"></span></p>
+                </div>
+            </div>
+            <p id="fight_distance"></p>
+            <div class="enemy_class">
+                <div id="enemy_id">
+                    <p class="fight_enemy"></p>
+                    <p id="enemy_id">HP: <span class="fight_enemy_health" style="color: lightgreen"></span></p>
+                    <p id="enemy_id">DMG: <span class="fight_enemy_damage" style="color: red"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="inventory">
+            <p>Loadout:</p>
+            <div class="inventory_space" ; id="loadout_1" style="tab-size: 0"></div>
+            <div class="inventory_space" ; id="loadout_2" style="tab-size: 0"></div>
+            <div class="inventory_space" ; id="loadout_3" style="tab-size: 0"></div>
+            <div class="inventory_space" ; id="loadout_4" style="tab-size: 0"></div>
+            <div class="inventory_space" ; id="loadout_5" style="tab-size: 0"></div>
+            <br />
+            <p style="clear: both; padding-top: 1em;">Stats:</pstyle="clear:>
+            <div class="stats"></div>
+            <br />
+            <p>Resources:</p>
+            <div class="resources"></div>
+        </div>
+        <div id="inventory">
+            <p>Inventory:</p>
+            <div class="inventory_space"; id="inventory_1" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_2" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_3" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_4" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_5" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_6" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_7" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_8" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_9" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_10" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_11" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_12" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_13" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_14" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_15" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_16" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_17" style="tab-size: 0"></div>
+            <div class="inventory_space"; id="inventory_18" style="tab-size: 0"></div>
+            <br />
+            <p style="clear: both; padding-top: 1em;">Shop:</pstyle="clear:>
+            <div class="shop">
+                <div class="inventory_space"; id="shop_1" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_2" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_3" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_4" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_5" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_6" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_7" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_8" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_9" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_10" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_11" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_12" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_13" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_14" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_15" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_16" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_17" style="tab-size: 0; display: none"></div>
+                <div class="inventory_space"; id="shop_18" style="tab-size: 0; display: none"></div>
+            </div>
+        </div>
+        <div class="logs">
+            <p>Locations:</p>
+            <div id="locations">
+                <button class="fight_button"; onclick="pre_travel(0)">Travel to EZLand</button>
+                <button class="fight_button"; onclick="pre_travel(1)">Travel to Dripton</button>
+                <button class="shop_button"; title="300 DripScore Required!"; onclick="shop_travel(0)"; disabled>Travel to PogMart</button>
+            </div>
+            <br />
+            <p>Logs:</p>
+            <div class="logs_battle">
+                <p class="logs_battle_output"></p>
+            </div>
+            <br />
+            <p>Loot Table:</p>
+            <div class="drop_table"></div>
         </div>
     </body>
 </html>
